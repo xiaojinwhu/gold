@@ -1,0 +1,3 @@
+uv sync --system -e .
+
+uv run python gold.py     --model_name_or_path Qwen/Qwen2-0.5B-Instruct     --teacher_model_name_or_path Qwen/Qwen2-1.5B-Instruct     --dataset_name trl-lib/chatbot_arena_completions     --learning_rate 2e-4     --per_device_train_batch_size 1     --gradient_accumulation_steps 8     --output_dir gold-model     --num_train_epochs 1       --gradient_checkpointing     --use_peft     --lora_r 16     --lora_alpha 16 --use-vllm
